@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useHistory, Switch, Route, Redirect, Link } from "react-router-dom"
 
 function App() {
+  const history = useHistory();
+  console.log(history)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/home" component={() => <div>Home: <Link to="/offer">go to Offer</Link></div>} />
+        <Route path="/offer" component={() => <div>Offer: <Link to="/home">go to Home</Link> </div>} />
+        <Redirect path="*" to="/home" />
+      </Switch>
     </div>
   );
 }
