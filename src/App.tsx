@@ -1,5 +1,7 @@
-import './App.css';
-import { useHistory, Switch, Route, Redirect, Link } from "react-router-dom"
+import './App.scss';
+import { useHistory, Switch, Route, Redirect } from "react-router-dom"
+import Home from "./containers/Home"
+import Offer from "./containers/Offer"
 
 function App() {
   const history = useHistory();
@@ -7,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/home" component={() => <div>Home: <Link to="/offer">go to Offer</Link></div>} />
-        <Route path="/offer" component={() => <div>Offer: <Link to="/home">go to Home</Link> </div>} />
+        <Route path="/home" component={Home} />
+        <Route path="/offer" component={Offer} />
         <Redirect path="*" to="/home" />
       </Switch>
     </div>
