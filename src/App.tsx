@@ -1,11 +1,13 @@
-import './App.scss';
-import { useHistory, Switch, Route, Redirect } from "react-router-dom"
-import Home from "./containers/Home"
-import Offer from "./containers/Offer"
+import "./App.scss";
+import { useHistory, Switch, Route, Redirect } from "react-router-dom";
+import Home from "./containers/Home";
+import Offer from "./containers/Offer";
+
+import "./font.css";
 
 function App() {
   const history = useHistory();
-  console.log(history)
+  console.log(history);
   return (
     <div className="App">
       <Switch>
@@ -18,4 +20,3 @@ function App() {
 }
 
 export default App;
-

@@ -6,6 +6,9 @@ const StyledButton = withStyles({
     width: "115px",
     height: "30px",
   },
+  outlined: {
+    padding: "1px 4px",
+  },
   outlinedPrimary: {
     textTransform: "none",
     color: "#09B1BA",
