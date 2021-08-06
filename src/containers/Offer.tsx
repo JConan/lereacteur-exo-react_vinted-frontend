@@ -1,9 +1,5 @@
-import { Link } from "react-router-dom"
+import SortPrice from "../components/header/SortPrice";
 
-const Offer = () =>
-    <div>
-        Offer:
-        <Link to="/home">Go to Home</Link>
-    </div>
+const Offer = () => <SortPrice />;
 
 export default Offer;
