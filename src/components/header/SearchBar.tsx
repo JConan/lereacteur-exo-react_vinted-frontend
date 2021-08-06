@@ -5,7 +5,24 @@ import Search from "@material-ui/icons/Search";
 
 const StyledInput = withStyles({
   root: {
-    width: "590px",
+    width: "100%",
+    height: "37px",
+    background: "#F5F6F7",
+    marginBottom: "24px",
+
+    "&::before": {
+      content: "unset",
+    },
+
+    "&::after": {
+      content: "unset",
+    },
+  },
+
+  input: {
+    "&::placeholder": {
+      opacity: "0.15",
+    },
   },
 })(Input);
 
@@ -15,7 +32,7 @@ export const SearchBar = () => (
     placeholder="Recherche des articles"
     startAdornment={
       <InputAdornment position="start">
-        <Search />
+        <Search opacity="0.3" />
       </InputAdornment>
     }
   />

@@ -5,6 +5,8 @@ import SortPrice from "../components/header/SortPrice";
 import PriceSlider from "../components/header/PriceSlider";
 import Button from "../components/header/Button";
 
+import "./Header.scss";
+
 const Home = () => {
   const [sortAsc, setSortAsc] = useState(true);
 
@@ -27,11 +29,11 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="actions">
+        <div className="login-action">
           <Button label="S'inscrire" />
-          <Button label="S'inscrire" />
-          <Button label="S'inscrire" color="secondary" />
+          <Button label="Se connecter" />
         </div>
+        <Button label="Vends tes articles" color="secondary" />
       </header>
     </>
   );

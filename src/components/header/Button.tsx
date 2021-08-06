@@ -2,6 +2,10 @@ import MaterialButton from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core";
 
 const StyledButton = withStyles({
+  root: {
+    width: "115px",
+    height: "30px",
+  },
   outlinedPrimary: {
     textTransform: "none",
     color: "#09B1BA",
