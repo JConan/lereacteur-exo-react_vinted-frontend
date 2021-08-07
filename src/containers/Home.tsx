@@ -5,7 +5,9 @@ import SortPrice from "../components/header/SortPrice";
 import PriceSlider from "../components/header/PriceSlider";
 import Button from "../components/header/Button";
 
+import tear from "../assets/images/tear.svg";
 import "./Header.scss";
+import "./Splash.scss";
 
 const Home = () => {
   const [sortDescending, setSortAsc] = useState(false);
@@ -34,6 +36,15 @@ const Home = () => {
         </div>
         <Button label="Vends tes articles" color="secondary" />
       </header>
+      <div className="splash">
+        <img src={tear} alt="tear" className="tear" />
+        <div className="slogan">
+          <div>
+            <span>Prêts à faire du tri dans vos placards ?</span>
+            <Button label="Commencer à vendre" color="secondary" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
