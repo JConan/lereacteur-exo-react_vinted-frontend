@@ -8,8 +8,7 @@ import Button from "../components/header/Button";
 import "./Header.scss";
 
 const Home = () => {
-  const [sortAsc, setSortAsc] = useState(true);
-
+  const [sortDescending, setSortAsc] = useState(false);
   const [value, setValue] = useState<number[]>([10, 100]);
 
   return (
@@ -19,7 +18,7 @@ const Home = () => {
         <div className="filters">
           <SearchBar />
           <SortPrice
-            checked={sortAsc}
+            checked={sortDescending}
             onChange={(e) => setSortAsc(e.target.checked)}
           />
           <PriceSlider
